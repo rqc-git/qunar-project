@@ -6,7 +6,7 @@ import router from './router'
 import FastClick from 'fastclick'
 import 'assets/css/reset.css'
 
-// 解决移动端300mm延迟问题
+// 解决移动端300mm延迟问题你们好
 FastClick.attach(document.body)
 
 Vue.config.productionTip = false
