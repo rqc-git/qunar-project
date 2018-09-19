@@ -2,10 +2,12 @@
   <div class="icons">
     <swiper :options="swiperOption">
       <swiper-slide v-for="(page, index) of getPages" :key="index">
-        <div class="area-con" v-for="item of page" :key="item.id">
-          <div class="area-item">
-            <img class="area-img" :src="item.imgUrl">
-            <p class="area-desc">{{item.title}}</p>
+        <div class="area-con">
+          <div class="area-item" v-for="item of page" :key="item.id">
+            <router-link  :to="'/dayTravel/'+item.id">
+              <img class="area-img" :src="item.imgUrl">
+              <p class="area-desc">{{item.title}}</p>
+            </router-link>
           </div>
         </div>
       </swiper-slide>
@@ -66,4 +68,5 @@ export default {
           text-overflow: ellipsis
           line-height: .4rem
           text-align center
+          font-size .25rem
 </style>
